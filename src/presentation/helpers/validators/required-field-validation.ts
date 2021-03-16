@@ -9,7 +9,7 @@ export class RequiredFieldValidation implements Validation {
 
   validate (input: any): Error {
     if (!input[this.fiedlName]) {
-      return new MissingParamError(input[this.fiedlName])
+      return new MissingParamError(this.fiedlName)
     }
   }
 }
